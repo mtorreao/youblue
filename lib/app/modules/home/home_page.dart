@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -16,7 +17,20 @@ class _HomePageState extends State<HomePage> {
         title: Text(widget.title),
       ),
       body: Column(
-        children: <Widget>[],
+        children: <Widget>[
+          RaisedButton(
+            child: Text('Login'),
+            onPressed: () {
+              Modular.to.pushReplacementNamed('/login');
+            },
+          ),
+          RaisedButton(
+            child: Text('Products'),
+            onPressed: () {
+              Modular.to.pushReplacementNamed('/products');
+            },
+          ),
+        ],
       ),
     );
   }

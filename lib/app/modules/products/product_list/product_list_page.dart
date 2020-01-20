@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:you_blue/app/modules/product_list/product_list_controller.dart';
+import 'package:you_blue/app/modules/products/product_list/product_list_controller.dart';
 import 'package:you_blue/app/shared/models/product_model.dart';
 
 class ProductListPage extends StatefulWidget {

@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:you_blue/app/app_controller.dart';
 import 'package:you_blue/app/app_widget.dart';
-import 'package:you_blue/app/modules/product_list/product_list_module.dart';
+import 'package:you_blue/app/modules/login/login_module.dart';
+import 'package:you_blue/app/modules/products/products_module.dart';
+
+import 'modules/home/home_module.dart';
 
 class AppModule extends MainModule {
   @override
@@ -12,8 +15,10 @@ class AppModule extends MainModule {
 
   @override
   List<Router> get routers => [
-        // Router('/', module: HomeModule()),
-        Router('/', module: ProductListModule()),
+        Router('/', module: HomeModule()),
+        Router('/products', module: ProductsModule()),
+        Router('/login',
+            module: LoginModule(), transition: TransitionType.upToDown),
       ];
 
   @override
