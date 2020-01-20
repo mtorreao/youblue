@@ -12,9 +12,4 @@ abstract class _HomeBase with Store {
   void increment() {
     value++;
   }
-
-  @action
-  void decrement() {
-    value--;
-  }
 }
